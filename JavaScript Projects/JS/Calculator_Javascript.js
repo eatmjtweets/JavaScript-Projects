@@ -22,7 +22,7 @@
       } else {
       // this overwrites Displau_Value if the current value is 0
       // otherwise it adds onto it
-        Calculator.Display_value = Display_Value === '0' ? digit : Display_Value + digit;
+        Calculator.Display_Value = Display_Value === '0' ? digit : Display_Value + digit;
       }
     }
 
@@ -58,7 +58,7 @@
               Calculator.First_Operand = Value_of_Input;
             } else if (operator) {
             //checks if an operator already exists
-              const Value_Now = First_Ooperand || 0;
+              const Value_Now = First_Operand || 0;
             //if operator exists, property lookup is performed for the operator
             //in the Perform_Calculation object and the function that matches the 
             //operatator is executed
@@ -109,7 +109,7 @@
                 return;
               }
 
-              if (target.classLIst.contains('operator')) {
+              if (target.classList.contains('operator')) {
                 Handle_Operator(target.value);
                 Update_Display();
                 return;
@@ -122,7 +122,7 @@
               }
 
               // ensures that AC clears the numbers from the Calculator
-                if (target.classlist.contains('all-clear')) {
+                if (target.classList.contains('all-clear')) {
                   Calculator_Reset ();
                   Update_Display();
                   return;
