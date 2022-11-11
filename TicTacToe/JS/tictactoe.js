@@ -37,7 +37,7 @@
         }
 
         //This function plays placement sound.
-          Audio('./media/place.mp3');
+          audio('./media/place.mp3');
         //This condition checks to see if it is computers turn.
           if(activePlayer === 'O') {
             //This function disables clicking for computer's choice.
@@ -53,7 +53,7 @@
   //This function results in a random square being selected.
     function computersTurn() {
       //This boolean is needed for our while loop.
-        let sucess = false;
+        let success = false;
       //This variable stores a random 0-8
         let pickASquare;
       //This condition allows our while loop to keep
@@ -117,17 +117,7 @@
             setTimeout (function () {resetGame ();}, 1000);
         }
 
-  //This function checks if an array includes 3 strings.
-  //It is used to check for each win condition.
-      function arrayIncludes(squareA, squareB, squareC) {
-        //The next 3 variables will be used to check for 3 in a row.
-          const a = selectedSquares.includes(squareA);
-          const b = selectedSquares.includes(squareB);
-          const c = selectedSquares.includes(squareC);
-        //If the 3 variables we pass are all included in our array true is
-        //returned and our else if condition executes the drawWinLine function.
-          if (a === true && b === true && c === true) {return true; }
-      }
+  
     }
 
     //This function makes our body element temporarily unclickable
@@ -138,6 +128,18 @@
       setTImeout (function () {body.style.pointerEvents = 'auto';}, 1000);
       }
 
+
+      //This function checks if an array includes 3 strings.
+      //It is used to check for each win condition.
+      function arrayIncludes(squareA, squareB, squareC) {
+        //The next 3 variables will be used to check for 3 in a row.
+          const a = selectedSquares.includes(squareA);
+          const b = selectedSquares.includes(squareB);
+          const c = selectedSquares.includes(squareC);
+        //If the 3 variables we pass are all included in our array true is
+        //returned and our else if condition executes the drawWinLine function.
+          if (a === true && b === true && c === true) {return true; }
+      }
     
     //This function takes a string parameter of the path you set earlier for 
     //placement sound ('./media/place.mp3')
