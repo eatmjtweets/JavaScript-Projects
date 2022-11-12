@@ -125,7 +125,7 @@
     //This makes our body unclickable.
       body.style.pointerEvents = 'none';
     //This makes our body clickable again after 1 second.
-      setTImeout (function () {body.style.pointerEvents = 'auto';}, 1000);
+      setTimeout (function () {body.style.pointerEvents = 'auto';}, 1000);
       }
 
 
